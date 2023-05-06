@@ -23,6 +23,7 @@ const Footer = () => {
                     <a
                         href="https://twitter.com/Jonathan2525252"
                         className="footer__social-link"
+                        rel="noreferrer"
                         target='_blank'
                     >
                         <i class="bx bxl-twitter"></i>
@@ -31,6 +32,7 @@ const Footer = () => {
                     <a
                         href="https://linkedin.com/in/jonapuglla2000"
                         className="footer__social-link"
+                        rel="noreferrer"
                         target='_blank'
                     >
                         <i class="bx bxl-linkedin"></i>
@@ -39,6 +41,7 @@ const Footer = () => {
                     <a
                         href="https://github.com/jonap22"
                         className="footer__social-link"
+                        rel="noreferrer"
                         target='_blank'
                     >
                         <i class="bx bxl-github"></i>
