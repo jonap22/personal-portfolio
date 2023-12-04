@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.21a71c46.css",
-    "main.js": "/personal-portfolio/static/js/main.48a460ed.js",
+    "main.js": "/personal-portfolio/static/js/main.1fd3f75b.js",
     "static/media/Jonathan-Black.jpg": "/personal-portfolio/static/media/Jonathan-Black.cf5c9e80a534968118cb.jpg",
     "static/media/aboutMe.jpg": "/personal-portfolio/static/media/aboutMe.cf5c9e80a534968118cb.jpg",
     "static/media/CV_PugllaJonathan_EN.pdf": "/personal-portfolio/static/media/CV_PugllaJonathan_EN.eb4244c6427b8eec3d9e.pdf",
     "index.html": "/personal-portfolio/index.html",
     "main.21a71c46.css.map": "/personal-portfolio/static/css/main.21a71c46.css.map",
-    "main.48a460ed.js.map": "/personal-portfolio/static/js/main.48a460ed.js.map"
+    "main.1fd3f75b.js.map": "/personal-portfolio/static/js/main.1fd3f75b.js.map"
   },
   "entrypoints": [
     "static/css/main.21a71c46.css",
-    "static/js/main.48a460ed.js"
+    "static/js/main.1fd3f75b.js"
   ]
 }
