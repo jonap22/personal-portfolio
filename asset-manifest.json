@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.f7f991e8.css",
-    "main.js": "/personal-portfolio/static/js/main.2be977fb.js",
+    "main.js": "/personal-portfolio/static/js/main.e21715c9.js",
     "static/media/Jonathan-Black.jpg": "/personal-portfolio/static/media/Jonathan-Black.cf5c9e80a534968118cb.jpg",
-    "static/media/aboutMe.jpg": "/personal-portfolio/static/media/aboutMe.cf5c9e80a534968118cb.jpg",
-    "static/media/CV_PugllaJonathan_EN.pdf": "/personal-portfolio/static/media/CV_PugllaJonathan_EN.9ed2b2479eb3147bad73.pdf",
+    "static/media/CV_PugllaJonathan_EN.pdf": "/personal-portfolio/static/media/CV_PugllaJonathan_EN.a52cc679f1a2899b18c0.pdf",
+    "static/media/jonathan_bw.jpg": "/personal-portfolio/static/media/jonathan_bw.fb205261cfadcebc2452.jpg",
     "index.html": "/personal-portfolio/index.html",
     "main.f7f991e8.css.map": "/personal-portfolio/static/css/main.f7f991e8.css.map",
-    "main.2be977fb.js.map": "/personal-portfolio/static/js/main.2be977fb.js.map"
+    "main.e21715c9.js.map": "/personal-portfolio/static/js/main.e21715c9.js.map"
   },
   "entrypoints": [
     "static/css/main.f7f991e8.css",
-    "static/js/main.2be977fb.js"
+    "static/js/main.e21715c9.js"
   ]
 }
