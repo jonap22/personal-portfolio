@@ -67,7 +67,7 @@
 
   .nav__menu {
     position: fixed;
-    bottom: -100%;
+    bottom: -500%;
     left: 0;
     width: 100%;
     background-color: var(--body-color);
