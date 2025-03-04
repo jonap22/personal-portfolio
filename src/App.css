@@ -140,6 +140,7 @@ img {
 
 /* LAYOUT */
 .container {
+  width: auto;
   max-width: 968px;
   margin-left: auto;
   margin-right: auto;
