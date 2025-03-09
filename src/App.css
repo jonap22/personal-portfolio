@@ -15,12 +15,14 @@
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-light: #e8e8e8;
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --title-color-blue: #99C3FF;
   --text-color: hsl(var(--hue), var(--sat), 46%);
+  --text-color-light: #e8e8e8;
+  --text-color-blue: #99C3FF;
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #101218;
-  --text-color-light: #e8e8e8;
-  --text-color-white: #fff;
 
   /* Font and typography */
   --body-font: "Poppins", sans-serif;
