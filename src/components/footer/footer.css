@@ -9,7 +9,7 @@
 
 .footer__title,
 .footer__link {
-    color: var(--title-color);
+    color: var(--title-color-light);
 }
 
 .footer__title {
@@ -19,7 +19,7 @@
 }
 
 .footer__link:hover {
-    color: var(--title-color-dark);
+    color: var(--title-color-blue);
 }
 
 .footer__list {
@@ -36,7 +36,7 @@
 }
 
 .footer__social-link {
-    background-color: var(--title-color);
+    background-color: var(--title-color-light);
     color: var(--container-color);
     font-size: 1.125rem;
     padding: 0.4rem;
@@ -45,13 +45,13 @@
 }
 
 .footer__social-link:hover {
-    background-color: var(--title-color-dark);
+    background-color: var(--title-color-blue);
 }
 
 .footer__copy {
     display: block;
     margin-top: 4.5rem;
-    color: var(--title-color);
+    color: var(--title-color-light);
     text-align: center;
     font-size: var(--smaller-font-size);
 }

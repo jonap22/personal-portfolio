@@ -28,12 +28,13 @@
 
 .contact__card-icon {
     font-size: 2rem;
-    color: var(--title-color);
+    color: var(--title-color-light);
     margin-bottom: var(--mb-0-25);
 }
 
 .contact__card-title,
 .contact__card-data {
+    color: var(--title-color-light);
     font-size: var(--small-font-size);
 }
 
@@ -47,7 +48,7 @@
 }
 
 .contact__button {
-    color: var(--text-color);
+    color: var(--text-color-light);
     font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;
