@@ -48,6 +48,25 @@
     background-color: var(--title-color-blue);
 }
 
+.footer__divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--title-color-light);
+    margin-bottom: 2.0rem;
+}
+
+.footer__footnote {
+    display: block;
+    margin-bottom: 2.0rem;
+    color: var(--title-color-light);
+    text-align: left;
+    font-size: var(--smaller-font-size);
+}
+
+.footer__footnote:hover {
+    color: var(--title-color-blue);
+}
+
 .footer__copy {
     display: block;
     margin-top: 4.5rem;

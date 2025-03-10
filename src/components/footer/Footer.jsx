@@ -5,6 +5,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
+        <p id="footnote-1" className="footer__footnote">
+          1. <a href="https://www.vecteezy.com/free-png/3d-character">3D Character PNGs by Vecteez.</a>
+        </p>
+        
+        <hr className="footer__divider" />
+
         <h1 className="footer__title">Puglla</h1>
 
         <ul className="footer__list">

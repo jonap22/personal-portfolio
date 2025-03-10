@@ -58,7 +58,7 @@ const Data = () => {
       <h3 className="home__subtitle">Software Engineer</h3>
       <p className="home__description">
         I am a hardworking Software Engineer offering extensive knowledge of
-        software development.
+        software development<sup><a href="#footnote-1">1</a></sup>.
       </p>
       <a href="#contact" className="button button--flex">
         Say Hello

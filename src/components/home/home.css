@@ -60,11 +60,11 @@
 }
 
 .home__img {
-    background: url(../../assets//Jonathan-Black.jpg);
+    background: url(../../assets//aboutMe.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+    box-shadow: inset 0 0 0 9px var(--title-color-dark);
     order: 1;
     justify-self: center;
     width: 300px;
