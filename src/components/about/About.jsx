@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/jonathan_bw.jpg";
+import AboutImg from "../../assets/male-character.png";
 import CV from "../../assets/CV_PugllaJonathan_EN.pdf";
 import Info from "./Info";
 
@@ -11,7 +11,7 @@ const About = () => {
       <span className="section__subtitle">My introduction</span>
 
       <div className="about__container container grid">
-        <img src={AboutImg} alt="" className="about__img" />
+        <img src={AboutImg} className="about__img"/>
         <div className="about__data">
           <Info />
 
@@ -19,7 +19,7 @@ const About = () => {
             I have full-time work experience and extensive knowledge of Software
             Development. Some of my projects include an Instagram clone, a ToDo
             App, and a Gaming Arcade. I am currently working on software
-            development projects at the Ecuadorian Army.
+            development projects at the Ecuadorian Army<sup><a href="#footnote-1">1</a></sup>.
           </p>
 
           <a download="" href={CV} className="button button--flex">

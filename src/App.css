@@ -18,9 +18,11 @@
   --title-color-light: #e8e8e8;
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --title-color-blue: #99C3FF;
+  --title-color-alt-blue: #0263E0;
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --text-color-light: #e8e8e8;
   --text-color-blue: #99C3FF;
+  --text-color-alt-blue: #F22F46;
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #101218;
 
@@ -166,7 +168,7 @@ img {
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--title-color-alt-blue);
 }
 
 .button__icon {

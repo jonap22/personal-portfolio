@@ -5,6 +5,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
+        <p id="footnote-1" className="footer__footnote">
+          1. <a href="https://www.vecteezy.com/free-png/3d-character">3D Character PNGs by Vecteez.</a>
+        </p>
+        
+        <hr className="footer__divider" />
+
         <h1 className="footer__title">Puglla</h1>
 
         <ul className="footer__list">
@@ -27,7 +33,7 @@ const Footer = () => {
 
         <div className="footer__social">
           <a
-            href="https://twitter.com/Jonathan2525252"
+            href="https://x.com/jona_puglla"
             className="footer__social-link"
             rel="noreferrer"
             target="_blank"
@@ -54,7 +60,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <span className="footer__copy">&#169; 2024. Made with love.</span>
+        <span className="footer__copy">&#169; 2025. Made with love.</span>
       </div>
     </footer>
   );
