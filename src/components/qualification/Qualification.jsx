@@ -72,44 +72,8 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Teaching Assistant</h3>
-                <span className="qualification__subtitle">EPN - Ecuador</span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Jun 2022 - Sep 2022
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">
-                  Computer Laboratory Assistant
-                </h3>
-                <span className="qualification__subtitle">EPN - Ecuador</span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Apr 2022 - Sep 2023
-                </div>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Cybersecurity Intern</h3>
-                <span className="qualification__subtitle">
-                  Fextor - Ecuador
-                </span>
+                <h3 className="qualification__title">Cybersecrity Assistant</h3>
+                <span className="qualification__subtitle">Fextor - Ecuador</span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i> Dec 2022 - Apr 2024
                 </div>
@@ -131,23 +95,23 @@ const Qualification = () => {
 
               <div>
                 <h3 className="qualification__title">
-                  Software Developer Intern
+                  Software Analyst II
                 </h3>
-                <span className="qualification__subtitle">Stack Builders</span>
+                <span className="qualification__subtitle">Ecuadorian Army - Ecuador</span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Jul 2023 - Dec 2023
+                  <i className="uil uil-calendar-alt"></i> Apr 2024 - Jul 2024
                 </div>
               </div>
             </div>
 
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Software Analyst II</h3>
+                <h3 className="qualification__title">Software Developer</h3>
                 <span className="qualification__subtitle">
-                  Ecuadorian Army - Ecuador
+                  Stack Builders - Ecuador
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Apr 2024 - Present
+                  <i className="uil uil-calendar-alt"></i> Jul 2024 - Present
                 </div>
               </div>
 

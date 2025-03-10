@@ -33,7 +33,7 @@ const Footer = () => {
 
         <div className="footer__social">
           <a
-            href="https://twitter.com/Jonathan2525252"
+            href="https://x.com/jona_puglla"
             className="footer__social-link"
             rel="noreferrer"
             target="_blank"
@@ -60,7 +60,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <span className="footer__copy">&#169; 2024. Made with love.</span>
+        <span className="footer__copy">&#169; 2025. Made with love.</span>
       </div>
     </footer>
   );
