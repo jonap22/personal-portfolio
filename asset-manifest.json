@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.e88bb831.css",
-    "main.js": "/personal-portfolio/static/js/main.8d59df37.js",
+    "main.js": "/personal-portfolio/static/js/main.b3003454.js",
     "static/media/aboutMe.png": "/personal-portfolio/static/media/aboutMe.00ed272bebbf7bf5873e.png",
     "static/media/male-character.png": "/personal-portfolio/static/media/male-character.fd8054d7285bf5bf8240.png",
     "static/media/CV_PugllaJonathan_EN.pdf": "/personal-portfolio/static/media/CV_PugllaJonathan_EN.e05db7ac63ac4b1ae67e.pdf",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.e88bb831.css",
-    "static/js/main.8d59df37.js"
+    "static/js/main.b3003454.js"
   ]
 }
