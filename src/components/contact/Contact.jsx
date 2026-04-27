@@ -8,13 +8,23 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      form.current,
-      process.env.REACT_APP_EMAILJS_USER_ID
-    );
-    e.target.reset();
+    emailjs.init({
+      publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+    });
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+      });
   };
   return (
     <section className="contact section" id="contact">
