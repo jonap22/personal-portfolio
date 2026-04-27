@@ -33,7 +33,7 @@ const Qualification = () => {
             type="button"
             id="qualification-tab-1"
             role="tab"
-            aria-selected={toggleState === 1}
+            aria-selected={toggleState === 1 ? 'true' : 'false'}
             aria-controls="qualification-panel-1"
             className={getTabButtonClassName(1)}
             onClick={() => toggleTab(1)}
@@ -46,7 +46,7 @@ const Qualification = () => {
             type="button"
             id="qualification-tab-2"
             role="tab"
-            aria-selected={toggleState === 2}
+            aria-selected={toggleState === 2 ? 'true' : 'false'}
             aria-controls="qualification-panel-2"
             className={getTabButtonClassName(2)}
             onClick={() => toggleTab(2)}
