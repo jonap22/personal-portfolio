@@ -28,25 +28,40 @@ const Qualification = () => {
       <span className="section__subtitle">My personal journey</span>
 
       <div className="qualification__container container">
-        <div className="qualification__tabs">
-          <div
+        <div className="qualification__tabs" role="tablist">
+          <button
+            type="button"
+            id="qualification-tab-1"
+            role="tab"
+            aria-selected={toggleState === 1}
+            aria-controls="qualification-panel-1"
             className={getTabButtonClassName(1)}
             onClick={() => toggleTab(1)}
           >
             <i className="uil uil-graduation-cap qualification__icon"></i>
             Education
-          </div>
+          </button>
 
-          <div
+          <button
+            type="button"
+            id="qualification-tab-2"
+            role="tab"
+            aria-selected={toggleState === 2}
+            aria-controls="qualification-panel-2"
             className={getTabButtonClassName(2)}
             onClick={() => toggleTab(2)}
           >
             <i className="uil uil-briefcase-alt qualification__icon"></i>
             Experience
-          </div>
+          </button>
         </div>
         <div className="qualification__sections">
-          <div className={getTabContentClassName(1)}>
+          <div
+            id="qualification-panel-1"
+            role="tabpanel"
+            aria-labelledby="qualification-tab-1"
+            className={getTabContentClassName(1)}
+          >
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Software Engineering</h3>
@@ -63,7 +78,12 @@ const Qualification = () => {
             </div>
           </div>
 
-          <div className={getTabContentClassName(2)}>
+          <div
+            id="qualification-panel-2"
+            role="tabpanel"
+            aria-labelledby="qualification-tab-2"
+            className={getTabContentClassName(2)}
+          >
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Cybersecurity Assistant</h3>
