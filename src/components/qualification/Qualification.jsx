@@ -66,7 +66,7 @@ const Qualification = () => {
           <div className={getTabContentClassName(2)}>
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Cybersecrity Assistant</h3>
+                <h3 className="qualification__title">Cybersecurity Assistant</h3>
                 <span className="qualification__subtitle">Fextor - Ecuador</span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i> Dec 2022 - Apr 2024
