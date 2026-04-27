@@ -8,6 +8,20 @@ const Qualification = () => {
     setToggleState(index);
   };
 
+  const getTabButtonClassName = (index) => {
+    const baseClassName = "qualification__button button--flex";
+    return toggleState === index
+      ? `${baseClassName} qualification__active`
+      : baseClassName;
+  };
+
+  const getTabContentClassName = (index) => {
+    const baseClassName = "qualification__content";
+    return toggleState === index
+      ? `${baseClassName} qualification__content-active`
+      : baseClassName;
+  };
+
   return (
     <section className="qualification section" id="qualification">
       <h2 className="section__title">Qualification</h2>
@@ -16,11 +30,7 @@ const Qualification = () => {
       <div className="qualification__container container">
         <div className="qualification__tabs">
           <div
-            className={
-              toggleState === 1
-                ? "qualification__button qualification__active button--flex"
-                : "qualification__button button--flex"
-            }
+            className={getTabButtonClassName(1)}
             onClick={() => toggleTab(1)}
           >
             <i className="uil uil-graduation-cap qualification__icon"></i>
@@ -28,11 +38,7 @@ const Qualification = () => {
           </div>
 
           <div
-            className={
-              toggleState === 2
-                ? "qualification__button qualification__active button--flex"
-                : "qualification__button button--flex"
-            }
+            className={getTabButtonClassName(2)}
             onClick={() => toggleTab(2)}
           >
             <i className="uil uil-briefcase-alt qualification__icon"></i>
@@ -40,13 +46,7 @@ const Qualification = () => {
           </div>
         </div>
         <div className="qualification__sections">
-          <div
-            className={
-              toggleState === 1
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
+          <div className={getTabContentClassName(1)}>
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Software Engineering</h3>
@@ -63,13 +63,7 @@ const Qualification = () => {
             </div>
           </div>
 
-          <div
-            className={
-              toggleState === 2
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
+          <div className={getTabContentClassName(2)}>
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Cybersecrity Assistant</h3>

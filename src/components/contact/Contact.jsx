@@ -1,26 +1,40 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(null);
+  const emailPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const emailServiceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const emailTemplateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (!emailPublicKey) {
+      return;
+    }
 
     emailjs.init({
-      publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+      publicKey: emailPublicKey,
     });
+  }, [emailPublicKey]);
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+
+    if (!form.current || !emailPublicKey || !emailServiceId || !emailTemplateId) {
+      console.error("Missing EmailJS configuration or form reference.");
+      return;
+    }
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        emailServiceId,
+        emailTemplateId,
         form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        emailPublicKey
       )
       .then(() => {
-        e.target.reset();
+        event.target.reset();
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
@@ -87,7 +101,7 @@ const Contact = () => {
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
+              <label htmlFor="name" className="contact__form-tag">
                 Name
               </label>
               <input
@@ -101,7 +115,7 @@ const Contact = () => {
             </div>
 
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
+              <label htmlFor="email" className="contact__form-tag">
                 Mail
               </label>
               <input
@@ -115,7 +129,7 @@ const Contact = () => {
             </div>
 
             <div className="contact__form-div contact__form-area">
-              <label htmlFor="" className="contact__form-tag">
+              <label htmlFor="message" className="contact__form-tag">
                 Message
               </label>
               <textarea
