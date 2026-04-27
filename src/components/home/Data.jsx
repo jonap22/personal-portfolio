@@ -4,7 +4,7 @@ const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        <span style={{ color: 'var(--title-color-alt-blue)' }}>Jonathan</span> <span style={{ color: 'var(--title-color)' }}>Puglla</span>
+        <span className="home__title-firstname">Jonathan</span> <span className="home__title-lastname">Puglla</span>
         <svg
           width="36"
           height="36"

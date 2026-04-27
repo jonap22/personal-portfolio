@@ -33,6 +33,14 @@
     margin-bottom: var(--mb-0-25);
 }
 
+.home__title-firstname {
+    color: var(--title-color-alt-blue);
+}
+
+.home__title-lastname {
+    color: var(--title-color);
+}
+
 .home__hand {
     width: 38px;
     height: 38px;
