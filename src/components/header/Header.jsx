@@ -1,24 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./header.css";
 
 export const Header = () => {
     /* Toggle menu */
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeNav, setActiveNav] = useState("#home");
+    const [isScrolled, setIsScrolled] = useState(false);
+    const headerRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
-            const header = document.querySelector("#header");
-            if (!header) {
-                return;
-            }
-
-            if (window.scrollY >= 80) {
-                header.classList.add("scroll-header");
-                return;
-            }
-
-            header.classList.remove("scroll-header");
+            setIsScrolled(window.scrollY >= 80);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -35,7 +27,7 @@ export const Header = () => {
     };
 
     return (
-        <header id="header" className={`!backdrop-blur-xl !bg-white/30 header`}>
+        <header id="header" ref={headerRef} className={`!backdrop-blur-xl !bg-white/30 header${isScrolled ? " scroll-header" : ""}`}>
             <nav className="nav container">
                 <a href="index.html" className="nav__logo">
                     Puglla
