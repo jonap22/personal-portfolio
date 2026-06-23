@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${inter.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans bg-background text-foreground">{children}</body>
+      <body className="font-sans bg-background text-foreground" suppressHydrationWarning>{children}</body>
     </html>
   )
 }
