@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     'Stack Builders',
   ],
   authors: [{ name: 'Jonathan Puglla' }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
   openGraph: {
     title: 'Jonathan Puglla — Software Engineer',
     description: 'Software Engineer, Founder, and Product Builder based in Ecuador.',
