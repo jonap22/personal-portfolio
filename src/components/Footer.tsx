@@ -23,7 +23,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#111111] text-white">
+    <footer className="bg-[#111111] text-white border-t border-white/10">
       <div className="site-container">
         {/* Main footer row */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-[1fr,auto,auto] gap-12 items-start border-b border-white/10">
@@ -36,7 +36,7 @@ export default function Footer() {
             >
               JP
             </a>
-            <p className="text-white/40 text-sm mt-3 leading-relaxed max-w-[260px]">
+            <p className="text-sm mt-3 leading-relaxed max-w-[260px]" style={{ color: 'rgba(255,255,255,0.62)' }}>
               Software Engineer building products that matter.
               <br />
               Based in Ecuador.
@@ -45,14 +45,15 @@ export default function Footer() {
 
           {/* Nav */}
           <nav className="flex flex-col gap-3" aria-label="Footer navigation">
-            <span className="font-mono text-[0.65rem] text-white/30 tracking-widest mb-1">
+            <span className="font-mono text-[0.65rem] tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.50)' }}>
               Navigation
             </span>
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+                className="text-sm hover:text-white transition-colors duration-200"
+                style={{ color: 'rgba(255,255,255,0.68)' }}
               >
                 {link.label}
               </a>
@@ -61,7 +62,7 @@ export default function Footer() {
 
           {/* Social */}
           <div className="flex flex-col gap-3">
-            <span className="font-mono text-[0.65rem] text-white/30 tracking-widest mb-1">
+            <span className="font-mono text-[0.65rem] tracking-widest mb-1" style={{ color: 'rgba(255,255,255,0.50)' }}>
               Connect
             </span>
             {SOCIAL.map(({ icon: Icon, label, href }) => (
@@ -70,7 +71,8 @@ export default function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200 group"
+                className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors duration-200 group"
+                style={{ color: 'rgba(255,255,255,0.68)' }}
               >
                 <Icon size={14} />
                 {label}
@@ -85,13 +87,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-mono text-xs text-white/25 tracking-wide">
+          <span className="font-mono text-xs tracking-wide" style={{ color: 'rgba(255,255,255,0.48)' }}>
             © {new Date().getFullYear()} Jonathan Puglla. Built with Next.js & Framer Motion.
           </span>
           <a
             href="#"
             onClick={handleBackToTop}
-            className="font-mono text-xs text-white/30 hover:text-white/70 transition-colors"
+            className="font-mono text-xs hover:text-white/80 transition-colors"
+            style={{ color: 'rgba(255,255,255,0.55)' }}
           >
             Back to top ↑
           </a>

@@ -39,6 +39,20 @@
     color: var(--color-fg);
   }
 
+  /* Global focus ring — visible on keyboard nav, suppressed on mouse */
+  :focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.65);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* White ring inside dark sections */
+  #home :focus-visible,
+  #experience :focus-visible,
+  #contact :focus-visible {
+    outline-color: rgba(255, 255, 255, 0.75);
+  }
+
   *::-webkit-scrollbar {
     width: 4px;
   }
@@ -262,6 +276,57 @@
   bottom: 8%;
   right: 8%;
   animation: orb-float-4 40s ease-in-out infinite;
+}
+
+/* Dark hero orb overrides — warmer, more luminous on dark bg */
+.orb-1.dark {
+  background: radial-gradient(circle at 35% 35%,
+    rgba(200, 150, 80, 0.22) 0%,
+    rgba(180, 130, 60, 0.10) 40%,
+    transparent 70%
+  );
+}
+.orb-2.dark {
+  background: radial-gradient(circle at 60% 60%,
+    rgba(180, 140, 90, 0.16) 0%,
+    rgba(160, 120, 70, 0.07) 45%,
+    transparent 70%
+  );
+}
+.orb-3.dark {
+  background: radial-gradient(circle at 50% 50%,
+    rgba(100, 80, 140, 0.18) 0%,
+    rgba(80, 60, 120, 0.08) 50%,
+    transparent 70%
+  );
+}
+.orb-4.dark {
+  background: radial-gradient(circle at 40% 40%,
+    rgba(190, 150, 80, 0.14) 0%,
+    rgba(160, 120, 60, 0.07) 50%,
+    transparent 70%
+  );
+}
+
+/* =====================================================
+   DARK SECTION FORM INPUTS
+   ===================================================== */
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+#contact input:focus-visible,
+#contact textarea:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.55) !important;
+  outline-offset: 0 !important;
 }
 
 /* =====================================================

@@ -11,7 +11,14 @@ import ReadingProgress from '@/components/ReadingProgress'
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:z-[200] focus:top-4 focus:left-4 focus:px-4 focus:py-2.5 focus:bg-[#111111] focus:text-white focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
+      <main id="main-content">
       <GrainOverlay />
       <ReadingProgress />
       <Navigation />
@@ -23,5 +30,6 @@ export default function Home() {
       <Contact />
       <Footer />
     </main>
+    </>
   )
 }
