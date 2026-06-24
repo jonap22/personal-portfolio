@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Inter_Tight, JetBrains_Mono } from 'next/font/google'
+import { headers } from 'next/headers'
 import './globals.css'
 
 const inter = Inter({
@@ -39,7 +40,6 @@ export const metadata: Metadata = {
     title: 'Jonathan Puglla — Software Engineer',
     description: 'Software Engineer, Founder, and Product Builder based in Ecuador.',
     type: 'website',
-    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
@@ -49,13 +49,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // next-intl middleware sets x-next-intl-locale on every request
+  const headersList = await headers()
+  const locale = headersList.get('x-next-intl-locale') ?? 'en'
+
   return (
     <html
-      lang="en"
+      lang={locale}
+      suppressHydrationWarning
       className={`${inter.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans bg-background text-foreground" suppressHydrationWarning>{children}</body>
+      <body className="relative font-sans bg-background text-foreground" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }

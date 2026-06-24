@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const ParticleNetwork = dynamic(() => import('./ParticleNetwork'), { ssr: false })
 
@@ -27,6 +28,7 @@ const itemVariants = {
 }
 
 export default function Hero() {
+  const t = useTranslations('hero')
   const sectionRef = useRef<HTMLElement>(null)
   const springCfg = { stiffness: 38, damping: 18 }
   const orbX = useSpring(0, springCfg)
@@ -53,13 +55,14 @@ export default function Hero() {
     return () => window.removeEventListener('mousemove', handleMouse)
   }, [orbX, orbY])
 
+  const headlineLines = t('headline').split('\n')
+
   return (
     <section
       ref={sectionRef}
       id="home"
       className="relative min-h-screen flex items-center bg-[#0F0F0E] overflow-hidden"
     >
-      {/* Ambient gradient orbs — warm glow on dark bg */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <motion.div className="orb orb-1 dark" style={{ x: orbX, y: orbY }} />
         <motion.div className="orb orb-2 dark" style={{ x: orb2X, y: orb2Y }} />
@@ -67,10 +70,8 @@ export default function Hero() {
         <motion.div className="orb orb-4 dark" />
       </div>
 
-      {/* Three.js particle neural network */}
       <ParticleNetwork />
 
-      {/* Text-protection gradient — ensures content stays readable over the globe */}
       <div
         className="absolute inset-0 z-[5] pointer-events-none"
         style={{
@@ -79,7 +80,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Main content */}
       <motion.div
         className="site-container relative z-10 pt-[68px] pb-28"
         style={{ y: contentY }}
@@ -90,7 +90,6 @@ export default function Hero() {
           animate="visible"
           className="max-w-[960px]"
         >
-          {/* Eyebrow */}
           <motion.div variants={itemVariants} className="mb-8">
             <span
               className="inline-flex items-center gap-3 font-mono text-[0.72rem] tracking-[0.06em]"
@@ -100,24 +99,23 @@ export default function Hero() {
                 className="inline-block w-7 h-px flex-shrink-0"
                 style={{ backgroundColor: 'rgba(247,245,242,0.5)' }}
               />
-              Software Engineer · Founder
+              {t('eyebrow')}
             </span>
           </motion.div>
 
-          {/* Headline */}
           <motion.h1
             variants={itemVariants}
             className="font-tight font-bold leading-[0.94] tracking-[-0.035em] mb-8 text-white"
             style={{ fontSize: 'clamp(3.6rem, 9.5vw, 9rem)' }}
           >
-            Building products
-            <br />
-            people actually
-            <br />
-            use.
+            {headlineLines.map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < headlineLines.length - 1 && <br />}
+              </span>
+            ))}
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             variants={itemVariants}
             className="leading-relaxed max-w-[560px] mb-12"
@@ -126,12 +124,9 @@ export default function Hero() {
               color: 'rgba(247,245,242,0.82)',
             }}
           >
-            I&apos;m Jonathan — a Software Engineer and Product Builder based in Ecuador.
-            I craft software that solves real problems with exceptional attention to
-            technical excellence and human experience.
+            {t('description')}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-3"
@@ -140,7 +135,7 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0F0E] px-[1.625rem] py-[0.875rem] rounded-lg text-sm font-medium min-h-[48px] w-full sm:w-auto hover:bg-white/90 transition-all duration-200 group"
             >
-              View Work
+              {t('viewWork')}
               <ArrowRight
                 size={16}
                 className="transition-transform duration-200 group-hover:translate-x-1"
@@ -150,13 +145,12 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 bg-white/8 border border-white/15 text-white px-[1.625rem] py-[0.875rem] rounded-lg text-sm font-medium min-h-[48px] w-full sm:w-auto hover:bg-white/15 transition-all duration-200"
             >
-              Get In Touch
+              {t('getInTouch')}
             </a>
           </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div
         style={{ opacity: scrollHintOpacity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 pointer-events-none"
@@ -172,7 +166,7 @@ export default function Hero() {
             className="font-mono tracking-[0.1em]"
             style={{ fontSize: '0.65rem', color: 'rgba(247,245,242,0.35)' }}
           >
-            Scroll
+            {t('scroll')}
           </span>
           <motion.div
             animate={{ y: [0, 7, 0] }}

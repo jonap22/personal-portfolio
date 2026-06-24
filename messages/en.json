@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "work": "Work",
+    "contact": "Contact",
+    "hireMe": "Hire me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to main content"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Founder",
+    "headline": "Building products\npeople actually\nuse.",
+    "description": "I'm Jonathan — a Software Engineer and Founder based in Ecuador. I build software that's technically rigorous, obsessively polished, and shaped around the people who use it.",
+    "viewWork": "View Work",
+    "getInTouch": "Get In Touch",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "01 — About",
+    "headline": "I build software\nthat matters.",
+    "quote": "Software becomes indispensable when it respects the intelligence of the person using it.",
+    "downloadResume": "Download Resume",
+    "bio": [
+      "From the Andes of Ecuador to the frontier of modern software engineering — I've been driven by a conviction that code is a craft, not just a technical exercise.",
+      "I spent five years at <epn>Escuela Politécnica Nacional</epn> earning a Software Engineering degree — building in parallel: hardening security at Fextor, delivering operational tools for the Ecuadorian Army, and now shipping production software at <sb>Stack Builders</sb>.",
+      "I care deeply about the full stack — clean architectures, thoughtful APIs, interfaces that feel effortless. Every commit is an opportunity to make something a little more right.",
+      "When I'm not coding, I'm thinking about products: why some software becomes indispensable while most fades away. That question drives everything I build."
+    ],
+    "stats": [
+      { "value": "3+", "label": "Years of professional experience" },
+      { "value": "10+", "label": "Projects shipped end-to-end" },
+      { "value": "2024", "label": "Software Engineering graduate" }
+    ]
+  },
+  "experience": {
+    "label": "02 — Experience",
+    "headline": "Where I've worked.",
+    "subtitle": "Three roles across security, military tech, and product engineering — each one sharpening a different dimension of the craft.",
+    "now": "Now",
+    "educationLabel": "Education",
+    "degree": "Software Engineering, B.S.",
+    "university": "Escuela Politécnica Nacional (EPN) · Quito, Ecuador",
+    "universityPeriod": "2019 — 2024",
+    "items": [
+      {
+        "period": "Jul 2024 — Present",
+        "role": "Software Developer",
+        "company": "Stack Builders",
+        "location": "Ecuador",
+        "description": "Currently serving as tech lead on the Okta project — leading DevRel microsites and maintaining developer tools like jwt.io for millions of developers worldwide. Previously led frontend development on Twilio's One Twilio rebranding initiative, migrating a large-scale AEM component library across three product lines.",
+        "tags": ["React", "TypeScript", "Next.js", "AEM"]
+      },
+      {
+        "period": "Apr 2024 — Jul 2024",
+        "role": "Software Analyst II",
+        "company": "Ecuadorian Army",
+        "location": "Quito, Ecuador",
+        "description": "Served as tech lead, overseeing the design and delivery of internal systems for the Ecuadorian Army. Built a database audit framework to ensure data integrity across critical Army records, and led the migration of internal tools at the SIPER department (Sistema de Personal de la Fuerza Terrestre).",
+        "tags": ["Python", "Java", "MySQL", "Linux"]
+      },
+      {
+        "period": "Dec 2022 — Apr 2024",
+        "role": "Cybersecurity Assistant",
+        "company": "Fextor",
+        "location": "Ecuador",
+        "description": "Conducted digital forensics investigations and network traffic analysis to identify and contain security incidents. Automated security monitoring with custom tooling, and assessed and patched critical infrastructure vulnerabilities.",
+        "tags": ["Security", "Python", "Network Analysis", "Bash"]
+      }
+    ]
+  },
+  "skills": {
+    "label": "03 — Skills",
+    "headline": "Tools of the trade.",
+    "subtitle": "Technologies I reach for when building products that need to scale, perform, and last.",
+    "groups": [
+      {
+        "category": "Frontend",
+        "description": "Interfaces people love to use",
+        "skills": ["React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "HTML & CSS"]
+      },
+      {
+        "category": "Backend",
+        "description": "Systems that scale reliably",
+        "skills": ["Node.js", "Python", "Java", "PHP", "REST APIs"]
+      },
+      {
+        "category": "Database",
+        "description": "Data modeled with intent",
+        "skills": ["MySQL", "PostgreSQL", "Firebase", "SQL"]
+      },
+      {
+        "category": "DevOps",
+        "description": "Ship fast, stay stable",
+        "skills": ["Git", "Docker", "Linux", "CI/CD", "Bash"]
+      },
+      {
+        "category": "Security",
+        "description": "Defense through knowledge",
+        "skills": ["Digital Forensics", "Vulnerability Assessment", "Network Security"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "04 — Work",
+    "headline": "Selected work.",
+    "contributedLabel": "Contributed",
+    "cofoundedLabel": "Co-founded",
+    "stackLabel": "Stack",
+    "skillsLabel": "Skills demonstrated",
+    "items": [
+      {
+        "name": "Okta",
+        "badge": "Contributed · 2026",
+        "subtitle": "Auth0 Developer Relations — Microsite Maintenance & Legacy Migration",
+        "description": "Lead engineering for Auth0's Developer Relations team at Okta — maintaining Next.js microsites, migrating legacy web properties to modern stacks, and keeping tools like jwt.io serving millions of developers worldwide.",
+        "url": "okta.com",
+        "href": "https://www.okta.com",
+        "highlights": [
+          {
+            "label": "DevRel Microsites",
+            "description": "Maintain and develop Next.js microsites for the Auth0 Developer Relations team — ensuring performance, content accuracy, and a consistent developer experience across properties including jwt.io."
+          },
+          {
+            "label": "Legacy Modernization",
+            "description": "Migrate legacy web properties from outdated architectures to modern Next.js, improving build times, scalability, and long-term maintainability across the Auth0 web ecosystem."
+          }
+        ],
+        "tags": ["Next.js", "TypeScript", "Auth0", "DevRel", "Site Maintenance", "Legacy Migration", "JWT"]
+      },
+      {
+        "name": "CertiConsulty",
+        "badge": "Co-founded · 2026",
+        "subtitle": "Occupational Safety & Health Consulting — Ecuador",
+        "description": "Co-founded CertiConsulty — an occupational safety and health consulting company helping Ecuadorian businesses achieve full compliance with Ministry of Labor regulations. Led company vision, product design, and go-to-market strategy, and assembled a certified, multidisciplinary team with national coverage.",
+        "url": "certiconsulty.com",
+        "href": "https://www.certiconsulty.com",
+        "highlights": [
+          {
+            "label": "Vision & Strategy",
+            "description": "Defined the company mission and go-to-market strategy for Ecuador's occupational safety consulting market, positioning CertiConsulty as a compliance-first, practical alternative to traditional providers."
+          },
+          {
+            "label": "Product & Operations",
+            "description": "Built the service offering — structured training programs, SENESCYT-validated certifications, SUT registration workflows, and a consulting model that scales across industries."
+          }
+        ],
+        "tags": ["Leadership", "Business Development", "Product Strategy", "B2B", "Go-to-Market", "Compliance Tech"]
+      },
+      {
+        "name": "Twilio",
+        "badge": "Contributed · 2025",
+        "subtitle": "One Twilio Rebranding — Component Migration & Web Experience",
+        "description": "Worked across two cross-functional teams at Twilio to drive the One Twilio rebranding initiative — migrating the AEM component library and unifying the web presence of Twilio, Segment, and SendGrid under a single design system.",
+        "url": "twilio.com",
+        "href": "https://twilio.com",
+        "workstreams": [
+          {
+            "team": "Engineering Platform",
+            "description": "Migrated AEM components to the One Twilio rebranding, unifying Segment and SendGrid components into a single cohesive design language across the entire platform.",
+            "tags": ["AEM", "Component Migration", "Segment", "SendGrid"]
+          },
+          {
+            "team": "Web Experience",
+            "description": "Migrated hundreds of pages to the new design system via the AEM authoring view. Resolved component-level bugs and improved the authoring and end-user experience.",
+            "tags": ["Design System", "AEM Authoring", "Bug Fixes", "DX"]
+          }
+        ],
+        "tags": ["Adobe Experience Manager", "JavaScript", "HTML & CSS", "Design Systems", "AEM Authoring"]
+      }
+    ]
+  },
+  "contact": {
+    "label": "05 — Contact",
+    "headline": "Let's build something\nmeaningful.",
+    "description": "Have a project in mind, want to collaborate, or just want to say hello? I'll get back within 24 hours.",
+    "telegramHandle": "@jonathanpuglla",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or idea...",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "sent": "Message Sent!",
+      "retry": "Try Again",
+      "successMsg": "You'll hear back within 24 hours.",
+      "errorMsg": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Software Engineer. Founder. Building at the intersection of craft and product.",
+    "location": "Based in Ecuador.",
+    "navTitle": "Navigation",
+    "connectTitle": "Connect",
+    "copyright": "Jonathan Puglla. Built with Next.js & Framer Motion.",
+    "backToTop": "Back to top ↑"
+  }
+}

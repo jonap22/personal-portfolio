@@ -3,16 +3,20 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-
-const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Work', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-]
+import { useTranslations } from 'next-intl'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
+  const t = useTranslations('nav')
+
+  const NAV_LINKS = [
+    { label: t('about'), href: '#about' },
+    { label: t('experience'), href: '#experience' },
+    { label: t('skills'), href: '#skills' },
+    { label: t('work'), href: '#projects' },
+    { label: t('contact'), href: '#contact' },
+  ]
+
   const [scrolled, setScrolled] = useState(false)
   const [onDark, setOnDark] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -27,7 +31,6 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // True when nav is transparent and floating over the dark hero
   const isDark = onDark && !scrolled
 
   useEffect(() => {
@@ -44,6 +47,7 @@ export default function Navigation() {
       if (el) observer.observe(el)
     })
     return () => observer.disconnect()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -75,8 +79,8 @@ export default function Navigation() {
             JP
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          {/* Desktop nav — only at lg+ to avoid tablet overflow */}
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -96,7 +100,8 @@ export default function Navigation() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:flex items-center gap-4">
+            <LanguageSwitcher isDark={isDark} />
             <a
               href="#contact"
               className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
@@ -105,16 +110,16 @@ export default function Navigation() {
                   : 'btn-primary'
               }`}
             >
-              Hire me
+              {t('hireMe')}
             </a>
           </div>
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-3 rounded-lg transition-colors ${
+            className={`lg:hidden p-3 rounded-lg transition-colors ${
               isDark ? 'text-white hover:bg-white/10' : 'hover:bg-black/5'
             }`}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
           >
@@ -132,20 +137,23 @@ export default function Navigation() {
             animate={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
             exit={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
             transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[99] bg-[rgba(247,245,242,0.97)] backdrop-blur-2xl flex flex-col"
+            className="fixed inset-0 z-[101] bg-[rgba(247,245,242,0.97)] backdrop-blur-2xl flex flex-col"
             aria-modal="true"
             role="dialog"
             aria-labelledby="mobile-menu-title"
           >
             <div className="site-container flex items-center justify-between h-[68px]">
               <span id="mobile-menu-title" className="font-tight font-bold text-xl tracking-[-0.03em]">JP</span>
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-black/5 transition-colors"
-                aria-label="Close menu"
-              >
-                <X size={22} />
-              </button>
+              <div className="flex items-center gap-4">
+                <LanguageSwitcher isDark={false} />
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2 rounded-lg hover:bg-black/5 transition-colors"
+                  aria-label={t('closeMenu')}
+                >
+                  <X size={22} />
+                </button>
+              </div>
             </div>
 
             <nav className="flex flex-col justify-center flex-1 site-container pb-20" aria-label="Mobile navigation">

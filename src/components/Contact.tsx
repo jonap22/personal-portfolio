@@ -4,10 +4,13 @@ import { useRef, useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { AnimateIn } from './AnimateIn'
 import { Send, Mail, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 export default function Contact() {
+  const t = useTranslations('contact')
+  const tf = useTranslations('contact.form')
   const formRef = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState<Status>('idle')
 
@@ -42,36 +45,35 @@ export default function Contact() {
       <div className="site-container">
         <AnimateIn>
           <span className="section-label" style={{ color: 'rgba(255,255,255,0.60)' }}>
-            05 — Contact
+            {t('label')}
           </span>
         </AnimateIn>
 
-        {/* Headline — full width */}
         <AnimateIn delay={0.1}>
           <h2
             className="font-tight font-bold leading-[1.02] tracking-[-0.04em] mb-12 text-white"
             style={{ fontSize: 'clamp(2.5rem, 4.5vw, 5.5rem)' }}
           >
-            Let&apos;s build something
-            <br />
-            meaningful.
+            {t('headline').split('\n').map((line, i, arr) => (
+              <span key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </span>
+            ))}
           </h2>
         </AnimateIn>
 
         <div className="border-t" style={{ borderColor: 'rgba(255,255,255,0.07)' }} />
 
-        {/* Two columns — description/links left, form right */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.5fr] gap-12 lg:gap-20 pt-12">
 
-          {/* Left — description + quick links */}
           <AnimateIn delay={0.2}>
             <div>
               <p
                 className="leading-relaxed mb-8"
                 style={{ fontSize: 'clamp(1rem, 1.2vw, 1.15rem)', color: 'rgba(255,255,255,0.52)' }}
               >
-                Have a project in mind, want to collaborate, or just want to say hello?
-                I&apos;d love to hear from you. I&apos;ll get back within 24 hours.
+                {t('description')}
               </p>
               <div className="flex flex-col gap-3">
                 <a
@@ -114,13 +116,12 @@ export default function Contact() {
                   }}
                 >
                   <MessageSquare size={14} />
-                  @jonathanpuglla
+                  {t('telegramHandle')}
                 </a>
               </div>
             </div>
           </AnimateIn>
 
-          {/* Right — form in dark glass card */}
           <AnimateIn delay={0.3}>
             <div
               className="rounded-2xl p-8 lg:p-10"
@@ -137,7 +138,7 @@ export default function Contact() {
                       className="block font-mono text-xs tracking-wide mb-2.5"
                       style={{ color: 'rgba(255,255,255,0.60)' }}
                     >
-                      Name <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
+                      {tf('name')} <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
                     </label>
                     <input
                       type="text"
@@ -145,13 +146,12 @@ export default function Contact() {
                       name="name"
                       required
                       aria-required="true"
-                      placeholder="Your name"
+                      placeholder={tf('namePlaceholder')}
                       className="w-full px-4 py-3.5 rounded-xl focus:outline-none transition-all duration-200 text-sm text-white"
                       style={{
                         backgroundColor: 'rgba(255,255,255,0.10)',
                         border: '1px solid rgba(255,255,255,0.15)',
-                        '--placeholder-color': 'rgba(255,255,255,0.25)',
-                      } as React.CSSProperties}
+                      }}
                     />
                   </div>
                   <div>
@@ -160,7 +160,7 @@ export default function Contact() {
                       className="block font-mono text-xs tracking-wide mb-2.5"
                       style={{ color: 'rgba(255,255,255,0.60)' }}
                     >
-                      Email <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
+                      {tf('email')} <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
                     </label>
                     <input
                       type="email"
@@ -168,7 +168,7 @@ export default function Contact() {
                       name="email"
                       required
                       aria-required="true"
-                      placeholder="your@email.com"
+                      placeholder={tf('emailPlaceholder')}
                       className="w-full px-4 py-3.5 rounded-xl focus:outline-none transition-all duration-200 text-sm text-white"
                       style={{
                         backgroundColor: 'rgba(255,255,255,0.10)',
@@ -184,7 +184,7 @@ export default function Contact() {
                     className="block font-mono text-xs tracking-wide mb-2.5"
                     style={{ color: 'rgba(255,255,255,0.60)' }}
                   >
-                    Message <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
+                    {tf('message')} <span aria-hidden="true" style={{ color: 'rgba(255,255,255,0.45)' }}>*</span>
                   </label>
                   <textarea
                     id="message"
@@ -192,7 +192,7 @@ export default function Contact() {
                     required
                     aria-required="true"
                     rows={6}
-                    placeholder="Tell me about your project or idea..."
+                    placeholder={tf('messagePlaceholder')}
                     className="w-full px-4 py-3.5 rounded-xl focus:outline-none transition-all duration-200 text-sm text-white resize-none"
                     style={{
                       backgroundColor: 'rgba(255,255,255,0.10)',
@@ -207,30 +207,30 @@ export default function Contact() {
                     disabled={status === 'sending' || status === 'success'}
                     className="inline-flex items-center justify-center gap-2 bg-white text-[#111111] px-[1.625rem] py-[0.875rem] rounded-lg text-sm font-medium min-h-[48px] w-full sm:w-auto hover:bg-white/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed group"
                   >
-                    {status === 'sending' && 'Sending…'}
-                    {status === 'success' && 'Message Sent!'}
+                    {status === 'sending' && tf('sending')}
+                    {status === 'success' && tf('sent')}
                     {status === 'idle' && (
                       <>
-                        Send Message
+                        {tf('send')}
                         <Send
                           size={15}
                           className="transition-transform duration-200 group-hover:translate-x-1"
                         />
                       </>
                     )}
-                    {status === 'error' && 'Try Again'}
+                    {status === 'error' && tf('retry')}
                   </button>
 
                   {status === 'success' && (
                     <div role="alert" aria-live="polite" className="flex items-center gap-2 text-sm text-[#4ade80]">
                       <CheckCircle2 size={16} aria-hidden="true" />
-                      <span>I&apos;ll be in touch soon.</span>
+                      <span>{tf('successMsg')}</span>
                     </div>
                   )}
                   {status === 'error' && (
                     <div role="alert" aria-live="assertive" className="flex items-center gap-2 text-sm text-red-400">
                       <AlertCircle size={16} aria-hidden="true" />
-                      <span>Something went wrong. Please try again.</span>
+                      <span>{tf('errorMsg')}</span>
                     </div>
                   )}
                 </div>

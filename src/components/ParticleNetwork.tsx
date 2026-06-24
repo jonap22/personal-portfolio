@@ -4,6 +4,17 @@ import { useRef, useEffect, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
+// THREE.Clock was deprecated in r183; @react-three/fiber 9.x still uses it internally.
+// The THREE namespace is exported as getter-only properties (webpack ES module seal),
+// so the class cannot be replaced. Narrow-suppress just this one deprecation warning.
+if (typeof window !== 'undefined') {
+  const _warn = console.warn.bind(console)
+  console.warn = (...args: Parameters<typeof console.warn>) => {
+    if (typeof args[0] === 'string' && args[0].startsWith('THREE.Clock:')) return
+    _warn(...args)
+  }
+}
+
 const NODE_COUNT = 80
 const CONNECT_DIST = 0.72
 const MAX_LINES = 160

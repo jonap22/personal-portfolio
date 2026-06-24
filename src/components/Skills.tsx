@@ -2,34 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { AnimateIn } from './AnimateIn'
+import { useTranslations } from 'next-intl'
 
-const SKILL_GROUPS = [
-  {
-    category: 'Frontend',
-    description: 'Interfaces people love to use',
-    skills: ['React', 'TypeScript', 'Next.js', 'JavaScript', 'Tailwind CSS', 'HTML & CSS'],
-  },
-  {
-    category: 'Backend',
-    description: 'Systems that scale reliably',
-    skills: ['Node.js', 'Python', 'Java', 'PHP', 'REST APIs'],
-  },
-  {
-    category: 'Database',
-    description: 'Data modeled with intent',
-    skills: ['MySQL', 'PostgreSQL', 'Firebase', 'SQL'],
-  },
-  {
-    category: 'DevOps',
-    description: 'Ship fast, stay stable',
-    skills: ['Git', 'Docker', 'Linux', 'CI/CD', 'Bash'],
-  },
-  {
-    category: 'Security',
-    description: 'Defense through knowledge',
-    skills: ['Penetration Testing', 'Vulnerability Assessment', 'Network Security'],
-  },
-]
+interface SkillGroup {
+  category: string
+  description: string
+  skills: string[]
+}
 
 const cardVariants = {
   rest: { y: 0, boxShadow: '0 0 0 1px rgba(0,0,0,0.07)' },
@@ -40,11 +19,14 @@ const cardVariants = {
 }
 
 export default function Skills() {
+  const t = useTranslations('skills')
+  const groups = t.raw('groups') as SkillGroup[]
+
   return (
     <section id="skills" className="section">
       <div className="site-container">
         <AnimateIn>
-          <span className="section-label">03 — Skills</span>
+          <span className="section-label">{t('label')}</span>
         </AnimateIn>
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -53,19 +35,18 @@ export default function Skills() {
               className="font-tight font-bold leading-[1.08] tracking-[-0.03em]"
               style={{ fontSize: 'clamp(2rem, 4.5vw, 3.75rem)' }}
             >
-              Tools of the trade.
+              {t('headline')}
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-muted text-sm max-w-[320px] leading-relaxed">
-              A curated set of technologies I reach for when building products that need to
-              scale, perform, and stand the test of time.
+              {t('subtitle')}
             </p>
           </AnimateIn>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {SKILL_GROUPS.map((group, i) => (
+          {groups.map((group, i) => (
             <AnimateIn key={group.category} delay={0.07 * i}>
               <motion.div
                 variants={cardVariants}

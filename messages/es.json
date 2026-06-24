@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "work": "Proyectos",
+    "contact": "Contacto",
+    "hireMe": "Contrátame",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "skipToContent": "Ir al contenido principal"
+  },
+  "hero": {
+    "eyebrow": "Ingeniero de Software · Fundador",
+    "headline": "Construyendo productos\nque la gente\nrealmente usa.",
+    "description": "Soy Jonathan — Ingeniero de Software y Fundador con base en Ecuador. Construyo software técnicamente sólido, cuidado hasta el detalle y diseñado para quienes lo usan.",
+    "viewWork": "Ver Proyectos",
+    "getInTouch": "Contáctame",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "01 — Sobre mí",
+    "headline": "Construyo software\nque importa.",
+    "quote": "El software se vuelve indispensable cuando respeta la inteligencia de quien lo usa.",
+    "downloadResume": "Descargar CV",
+    "bio": [
+      "De los Andes del Ecuador a la vanguardia de la ingeniería de software moderna — he sido guiado por la convicción de que el código es un oficio, no solo un ejercicio técnico.",
+      "Pasé cinco años en la <epn>Escuela Politécnica Nacional</epn> obteniendo mi título en Ingeniería de Software — construyendo en paralelo: reforzando seguridad en Fextor, entregando herramientas operativas para el Ejército Ecuatoriano y, ahora, enviando software de producción en <sb>Stack Builders</sb>.",
+      "Me importa profundamente el stack completo — arquitecturas limpias, APIs bien pensadas, interfaces que no crean fricción. Cada commit es una oportunidad de hacer algo un poco mejor.",
+      "Cuando no estoy programando, pienso en productos: por qué algunos productos se vuelven indispensables mientras la mayoría desaparece. Esa pregunta impulsa todo lo que construyo."
+    ],
+    "stats": [
+      { "value": "3+", "label": "Años de experiencia profesional" },
+      { "value": "10+", "label": "Proyectos entregados de principio a fin" },
+      { "value": "2024", "label": "Graduado en Ingeniería de Software" }
+    ]
+  },
+  "experience": {
+    "label": "02 — Experiencia",
+    "headline": "Dónde he trabajado.",
+    "subtitle": "Tres roles en seguridad, tecnología militar e ingeniería de producto — cada uno afilando una dimensión diferente del oficio.",
+    "now": "Presente",
+    "educationLabel": "Educación",
+    "degree": "Ingeniería de Software, Ing.",
+    "university": "Escuela Politécnica Nacional (EPN) · Quito, Ecuador",
+    "universityPeriod": "2019 — 2024",
+    "items": [
+      {
+        "period": "Jul 2024 — Presente",
+        "role": "Desarrollador de Software",
+        "company": "Stack Builders",
+        "location": "Ecuador",
+        "description": "Actualmente soy tech lead en el proyecto de Okta — liderando microsites de DevRel y manteniendo herramientas para desarrolladores como jwt.io para millones de desarrolladores en todo el mundo. Anteriormente lideré el desarrollo frontend en la iniciativa de rebranding One Twilio, migrando la librería de componentes AEM a gran escala en tres líneas de producto.",
+        "tags": ["React", "TypeScript", "Next.js", "AEM"]
+      },
+      {
+        "period": "Abr 2024 — Jul 2024",
+        "role": "Analista de Software II",
+        "company": "Ejército Ecuatoriano",
+        "location": "Quito, Ecuador",
+        "description": "Fui tech lead del equipo de ingeniería interna del Ejército Ecuatoriano. Construí un framework de auditoría de bases de datos para garantizar la integridad de los registros institucionales, y lideré la migración de herramientas internas en el departamento SIPER (Sistema de Personal de la Fuerza Terrestre).",
+        "tags": ["Python", "Java", "MySQL", "Linux"]
+      },
+      {
+        "period": "Dic 2022 — Abr 2024",
+        "role": "Asistente de Ciberseguridad",
+        "company": "Fextor",
+        "location": "Ecuador",
+        "description": "Realicé investigaciones forenses digitales y análisis de tráfico de red para identificar y contener incidentes de seguridad. Automaticé el monitoreo de seguridad con herramientas propias, y evalué y mitigué vulnerabilidades críticas en la infraestructura.",
+        "tags": ["Seguridad", "Python", "Análisis de Red", "Bash"]
+      }
+    ]
+  },
+  "skills": {
+    "label": "03 — Habilidades",
+    "headline": "Herramientas del oficio.",
+    "subtitle": "Tecnologías que uso cuando construyo productos que necesitan escalar, rendir y perdurar.",
+    "groups": [
+      {
+        "category": "Frontend",
+        "description": "Interfaces que la gente disfruta",
+        "skills": ["React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "HTML & CSS"]
+      },
+      {
+        "category": "Backend",
+        "description": "Sistemas que escalan de forma confiable",
+        "skills": ["Node.js", "Python", "Java", "PHP", "REST APIs"]
+      },
+      {
+        "category": "Base de Datos",
+        "description": "Datos modelados con intención",
+        "skills": ["MySQL", "PostgreSQL", "Firebase", "SQL"]
+      },
+      {
+        "category": "DevOps",
+        "description": "Entrega rápida, sistema estable",
+        "skills": ["Git", "Docker", "Linux", "CI/CD", "Bash"]
+      },
+      {
+        "category": "Seguridad",
+        "description": "Seguridad desde el conocimiento",
+        "skills": ["Análisis Forense Digital", "Evaluación de Vulnerabilidades", "Seguridad de Redes"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "04 — Proyectos",
+    "headline": "Proyectos seleccionados.",
+    "contributedLabel": "Contribución",
+    "cofoundedLabel": "Co-fundado",
+    "stackLabel": "Stack",
+    "skillsLabel": "Habilidades demostradas",
+    "items": [
+      {
+        "name": "Okta",
+        "badge": "Contribución · 2026",
+        "subtitle": "Auth0 Developer Relations — Mantenimiento de Micrositios y Migración Legacy",
+        "description": "Lidero la ingeniería del equipo de Developer Relations de Auth0 en Okta — manteniendo micrositios en Next.js, migrando propiedades web legacy a stacks modernos y manteniendo herramientas como jwt.io en funcionamiento para millones de desarrolladores en todo el mundo.",
+        "url": "okta.com",
+        "href": "https://www.okta.com",
+        "highlights": [
+          {
+            "label": "Micrositios DevRel",
+            "description": "Mantengo y desarrollo micrositios en Next.js para el equipo de Developer Relations de Auth0 — asegurando rendimiento, precisión de contenido y una experiencia de desarrollador consistente en propiedades como jwt.io."
+          },
+          {
+            "label": "Modernización Legacy",
+            "description": "Migro propiedades web legacy de arquitecturas desactualizadas a Next.js moderno, mejorando tiempos de compilación, escalabilidad y mantenibilidad a largo plazo en el ecosistema web de Auth0."
+          }
+        ],
+        "tags": ["Next.js", "TypeScript", "Auth0", "DevRel", "Mantenimiento", "Migración Legacy", "JWT"]
+      },
+      {
+        "name": "CertiConsulty",
+        "badge": "Co-fundado · 2026",
+        "subtitle": "Consultoría en Seguridad y Salud Ocupacional — Ecuador",
+        "description": "Co-fundé CertiConsulty — una empresa de consultoría en seguridad y salud ocupacional que ayuda a empresas ecuatorianas a lograr el cumplimiento pleno con las regulaciones del Ministerio de Trabajo. Lideré la visión de la empresa, el diseño del producto y la estrategia de entrada al mercado, y formé un equipo certificado y multidisciplinario con cobertura nacional.",
+        "url": "certiconsulty.com",
+        "href": "https://www.certiconsulty.com",
+        "highlights": [
+          {
+            "label": "Visión y Estrategia",
+            "description": "Definí la misión de la empresa y la estrategia de entrada al mercado de consultoría en seguridad ocupacional de Ecuador, posicionando a CertiConsulty como una alternativa práctica y orientada al cumplimiento frente a los proveedores tradicionales."
+          },
+          {
+            "label": "Producto y Operaciones",
+            "description": "Construí la oferta de servicios: programas de capacitación estructurados, certificaciones validadas por SENESCYT, flujos de registro en el SUT y un modelo de consultoría que escala entre industrias."
+          }
+        ],
+        "tags": ["Liderazgo", "Desarrollo de Negocios", "Estrategia de Producto", "B2B", "Go-to-Market", "Cumplimiento"]
+      },
+      {
+        "name": "Twilio",
+        "badge": "Contribución · 2025",
+        "subtitle": "Rebranding One Twilio — Migración de Componentes y Experiencia Web",
+        "description": "Trabajé en dos equipos multifuncionales en Twilio para impulsar la iniciativa de rebranding One Twilio — migrando la librería de componentes AEM y unificando la presencia web de Twilio, Segment y SendGrid bajo un único sistema de diseño.",
+        "url": "twilio.com",
+        "href": "https://twilio.com",
+        "workstreams": [
+          {
+            "team": "Plataforma de Ingeniería",
+            "description": "Migré componentes AEM al rebranding de One Twilio, unificando los componentes de Segment y SendGrid en un lenguaje de diseño cohesivo en toda la plataforma.",
+            "tags": ["AEM", "Migración de Componentes", "Segment", "SendGrid"]
+          },
+          {
+            "team": "Experiencia Web",
+            "description": "Migré cientos de páginas al nuevo sistema de diseño mediante la vista de autoría de AEM. Resolví errores a nivel de componente y mejoré la experiencia de autoría y del usuario final.",
+            "tags": ["Sistema de Diseño", "AEM Authoring", "Corrección de Bugs", "DX"]
+          }
+        ],
+        "tags": ["Adobe Experience Manager", "JavaScript", "HTML & CSS", "Sistemas de Diseño", "AEM Authoring"]
+      }
+    ]
+  },
+  "contact": {
+    "label": "05 — Contacto",
+    "headline": "Construyamos algo\nque importe.",
+    "description": "¿Tienes un proyecto en mente, quieres colaborar o simplemente decir hola? Te responderé en 24 horas.",
+    "telegramHandle": "@jonathanpuglla",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o idea...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando…",
+      "sent": "¡Mensaje Enviado!",
+      "retry": "Reintentar",
+      "successMsg": "Te responderé en menos de 24 horas.",
+      "errorMsg": "Algo salió mal. Por favor intenta de nuevo."
+    }
+  },
+  "footer": {
+    "tagline": "Ingeniero de Software y Fundador. Construyo productos que duran.",
+    "location": "Basado en Ecuador.",
+    "navTitle": "Navegación",
+    "connectTitle": "Conectar",
+    "copyright": "Jonathan Puglla. Hecho con Next.js & Framer Motion.",
+    "backToTop": "Volver arriba ↑"
+  }
+}
